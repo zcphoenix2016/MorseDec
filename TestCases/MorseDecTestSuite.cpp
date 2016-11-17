@@ -31,8 +31,8 @@ TEST(MorseDecTestSuite, TheOutputShouldBe2Dashs)
 
 TEST(MorseDecTestSuite, TheOutputShouldBeOneSpace)
 {
-    std::string l_str("111000111");
-    ASSERT_EQ("- -", MorseDec::decodeBits(l_str));
+    std::string l_str("101000111");
+    ASSERT_EQ(".. -", MorseDec::decodeBits(l_str));
 }
 
 TEST(MorseDecTestSuite, TheOutputShouldBe3Spaces)
@@ -41,4 +41,9 @@ TEST(MorseDecTestSuite, TheOutputShouldBe3Spaces)
     ASSERT_EQ("-   -", MorseDec::decodeBits(l_str));
 }
 
+TEST(MorseDecTestSuite, TheOutputShouldBeTwoDotsWithRate2)
+{
+    std::string l_str("110011");
+    ASSERT_EQ("..", MorseDec::decodeBits(l_str));
+}
 
