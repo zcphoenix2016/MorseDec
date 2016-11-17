@@ -5,7 +5,8 @@
 class MorseDec
 {
 public:
-    static std::string decodeBits(const std::string&);
+    static std::string decodeBits(std::string);
+    
 
 private:
     static std::string processContinuousOnes(auto p_iterOne, auto p_iterZero, 

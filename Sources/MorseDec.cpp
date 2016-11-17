@@ -65,7 +65,7 @@ unsigned int MorseDec::calcRate(const std::string& p_str)
     {
         l_point2Zero = std::find(l_point2One, p_str.end(), '0');
         l_rate = l_point2Zero - l_point2One;
-        if( l_distanceofone > l_rate && 0 != l_rate)
+        if(l_distanceofone > l_rate)
         {
             l_distanceofone = l_rate;
         }       
@@ -84,8 +84,11 @@ unsigned int MorseDec::calcRate(const std::string& p_str)
     
 }
 
-std::string MorseDec::decodeBits(const std::string& p_str)
+std::string MorseDec::decodeBits(std::string p_str)
 {
+    p_str.erase(0, p_str.find('1'));
+    p_str.erase(p_str.rfind('1') + 1);
+    
     std::string l_result;
     unsigned int l_rate = calcRate(p_str);
     auto l_point2One = std::find(p_str.begin(), p_str.end(), '1');
