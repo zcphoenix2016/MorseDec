@@ -53,3 +53,22 @@ TEST(MorseDecTestSuite, TheOutputShouldBeTwoDotsWithUselessZeros)
     ASSERT_EQ("..", MorseDec::decodeBits(l_str));
 }
 
+TEST(MorseDecTestSuite, SpecialTestCase1)
+{
+    std::string l_str("000000001111111111110000000000001111111111110000000");
+    ASSERT_EQ("..", MorseDec::decodeBits(l_str));
+}
+
+TEST(MorseDecTestSuite, SpecialTestCase2)
+{
+    std::string l_str("11111100000000000000111111");
+    ASSERT_EQ("-   -", MorseDec::decodeBits(l_str));
+}
+
+TEST(MorseDecTestSuite, TheLastTestCase)
+{
+   std::string l_str("1100110011001100000011000000111111001100111111001111110000000000000011001111110011111100111111000000110011001111110000001111110011001100000011");
+   
+   ASSERT_EQ(".... . -.--   .--- ..- -.. .", MorseDec::decodeBits(l_str));
+}
+
