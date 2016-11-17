@@ -5,23 +5,8 @@
 std::string MorseDec::decodeBits(const std::string& p_str)
 {
     std::string l_result;
-    
-    
-    
-/*    for(int i = 0;i < p_str.size();i++)
-    {
-       
-       if('1' == p_str[i])
-       {
-           l_result+= p_str[i];
-       }
-       
-       
-           
-    }*/
     int l_rate = 1;
-    auto l_point2One = p_str.begin();
-    l_point2One = std::find(p_str.begin(), p_str.end(), '1');
+    auto l_point2One = std::find(p_str.begin(), p_str.end(), '1');
     auto l_point2Zero = l_point2One;
      
     while(l_point2One !=  p_str.end())

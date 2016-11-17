@@ -22,3 +22,9 @@ TEST(MorseDecTestSuite, TheOutputShouldBeDashAndDot)
     
     ASSERT_EQ("-.", MorseDec::decodeBits(l_str));
 }
+
+TEST(MorseDecTestSuite, TheOutputShouldBe2Dashs)
+{
+    std::string l_str("1110111");
+    ASSERT_EQ("--", MorseDec::decodeBits(l_str));
+}
