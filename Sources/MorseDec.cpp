@@ -22,6 +22,11 @@ std::string MorseDec::decodeBits(const std::string& p_str)
         }
 
         l_point2One = std::find(l_point2Zero, p_str.end(), '1');
+        
+        if((l_point2One - l_point2Zero)/l_rate == 3)
+        {
+            l_result += " ";
+        }
     }
     return l_result;
 }
