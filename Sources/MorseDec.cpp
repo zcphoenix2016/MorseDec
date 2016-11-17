@@ -58,8 +58,7 @@ unsigned int MorseDec::calcRate(const std::string& p_str)
     unsigned int l_rate;
     unsigned int l_distanceofone = p_str.length() ,l_distanceofzero = p_str.length();
 
-
-    auto l_point2One = std::find(p_str.begin(), p_str.end(), '1');   
+    auto l_point2One = std::find(p_str.begin(), p_str.end(), '1');
     auto l_point2Zero = l_point2One;
     while(l_point2One !=  p_str.end())
     {

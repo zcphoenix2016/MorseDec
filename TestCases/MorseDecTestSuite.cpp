@@ -71,4 +71,3 @@ TEST(MorseDecTestSuite, TheLastTestCase)
    
    ASSERT_EQ(".... . -.--   .--- ..- -.. .", MorseDec::decodeBits(l_str));
 }
-
