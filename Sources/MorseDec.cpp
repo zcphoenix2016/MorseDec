@@ -35,7 +35,7 @@ std::string MorseDec::processContinuousOnes(auto p_iterOne, auto p_iterZero,
         return ".";
     }
     
-    return "";
+    return "*";
 }
 
 std::string MorseDec::processContinuousZeros(auto p_iterOne, auto p_iterZero,
